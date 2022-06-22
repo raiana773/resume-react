@@ -12,12 +12,13 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
-import { Link } from "@mui/material";
+import { useLocation, Link } from "react-router-dom";
 
 const pages = ["Интересы", "Опыт Работы"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const Header = () => {
+  const location = useLocation();
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -133,58 +134,45 @@ const Header = () => {
             <Link to="/skills">Навыки</Link>
             <Link to="/contact">Контакты</Link> */}
 
-            <a className="interests_css" href="/interests">
+            {/* <a className="interests_css" href="/interests">
               Интересы
             </a>
             <a className="work_css" href="/work">
               Опыт Работы
-            </a>
+            </a> */}
 
             {/* ! Потом исправить!! */}
-            {/* <Link to="edication">
+            <Link to="/">
               <Button
                 sx={{ m: 1 }}
                 variant="contained"
-                color={
-                  location.pathname === "/edication" ? "success" : "primary"
-                }
+                color={location.pathname === "/" ? "success" : "primary"}
               >
                 Образование
               </Button>
             </Link>
 
-            <Link to="skills">
-              <Button>
+            <Link to="/interests">
+              <Button
                 sx={{ m: 1 }}
-                variant="contained" color=
-                {location.pathname === "/rick-and-morty"
-                  ? "success"
-                  : "primary"}
+                variant="contained"
+                color={
+                  location.pathname === "/interests" ? "success" : "primary"
+                }
+              >
                 Навыки
               </Button>
             </Link>
 
-            <Link to="interstes">
-              <Button>
+            <Link to="/work">
+              <Button
                 sx={{ m: 1 }}
-                variant="contained" color=
-                {location.pathname === "/rick-and-morty"
-                  ? "success"
-                  : "primary"}
+                variant="contained"
+                color={location.pathname === "/work" ? "success" : "primary"}
+              >
                 Интересы
               </Button>
             </Link>
-
-            <Link to="contact">
-              <Button>
-                sx={{ m: 1 }}
-                variant="contained" color=
-                {location.pathname === "/rick-and-morty"
-                  ? "success"
-                  : "primary"}
-                Контакты
-              </Button>
-            </Link> */}
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>

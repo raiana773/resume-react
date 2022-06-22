@@ -58,24 +58,28 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* /* background: rgb(174, 186, 238);
+  min-width: 1100px;
+  /* 
+   background: rgb(174, 186, 238);
   background: radial-gradient(
     circle,
     rgba(174, 186, 238, 1) 0%,
-    rgba(182, 148, 233, 0) 100%
-  ); */
-  /* background-color: white; */
+    rgba(182, 148, 233, 0) 100%*/
 }
+
 @media (max-width: 1100px) {
   body {
     background-color: pink;
+    max-width: 1000px;
   }
 }
-@media (max-width: 1000px) {
+
+@media (max-width: 1100px) {
   .container {
-    width: 50%;
+    max-width: 1000px;
     background-color: pink;
     display: block;
+    /* padding: 0px, 10px; */
 
     /* flex-wrap: wrap; */
     /* justify-content: space-evenly; */
@@ -89,5 +93,21 @@ body {
 @media (max-width: 1100px) {
   .container-2 {
     background-color: pink;
+    max-width: 1000px;
+    padding: 0px, 15px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  h3 {
+    font-size: 30px;
+  }
+  span {
+    font-size: 30px;
+    padding-bottom: 10px;
+  }
+  .image {
+    padding-bottom: 15px;
+    line-height: 140%;
   }
 }
