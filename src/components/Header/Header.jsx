@@ -142,7 +142,7 @@ const Header = () => {
             </a> */}
 
             {/* ! Потом исправить!! */}
-            <Link to="/">
+            {/* <Link to="/">
               <Button
                 sx={{ m: 1 }}
                 variant="contained"
@@ -150,7 +150,7 @@ const Header = () => {
               >
                 Образование
               </Button>
-            </Link>
+            </Link> */}
 
             <Link to="/interests">
               <Button
