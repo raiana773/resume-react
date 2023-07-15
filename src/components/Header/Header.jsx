@@ -141,15 +141,12 @@ const Header = () => {
               Опыт Работы
             </a> */}
 
-            {/* ! Потом исправить!! */}
             {/* <Link to="/">
               <Button
                 sx={{ m: 1 }}
                 variant="contained"
                 color={location.pathname === "/" ? "success" : "primary"}
-              >
-                Образование
-              </Button>
+              ></Button>
             </Link> */}
 
             <Link to="/interests">
@@ -160,7 +157,7 @@ const Header = () => {
                   location.pathname === "/interests" ? "success" : "primary"
                 }
               >
-                Навыки
+                Интересы
               </Button>
             </Link>
 
@@ -170,7 +167,7 @@ const Header = () => {
                 variant="contained"
                 color={location.pathname === "/work" ? "success" : "primary"}
               >
-                Интересы
+                Навыки
               </Button>
             </Link>
           </Box>
